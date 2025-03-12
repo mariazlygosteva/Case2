@@ -25,11 +25,12 @@ def main():
     TR_prev = (a - b * (q - 1)) * (q - 1)
     MR = TR - TR_prev
     TC = c * q + d
-    C_prev = c * (q - 1) + d
-    MC = TC - C_prev
+    TC_prev = c * (q - 1) + d
+    MC = TC - TC_prev
 
     # 2
     Q = MR - MC
+    
     # 3
     P = a - b * Q
 
