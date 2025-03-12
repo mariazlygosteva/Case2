@@ -29,11 +29,7 @@ def main():
     MC = TC - C_prev
 
     # 2
-    optimal_volume = None
-    if MR == MC:
-        optimal_volume = q
-    else:
-        optimal_volume = q
+    optimal_volume = q
 
     # 3
     P = a - b * optimal_volume
