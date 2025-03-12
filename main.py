@@ -12,10 +12,12 @@ def main():
 
     demand_function = input(ru.DEMAND_FUNCTION)
     gross_cost_function = input(ru.GROSS_COST_FUNCTION)
-    demand_coeffs = demand_function.replace('P = ', '').replace(' ', '').split('-')
+    demand_coeffs = demand_function.replace('P = ', '').replace(
+        ' ', '').split('-')
     a = int(demand_coeffs[0])
     b = int(demand_coeffs[1].split('*')[0])
-    gross_coeffs = gross_cost_function.replace('TC =', '').replace(' ', '').split('+')
+    gross_coeffs = gross_cost_function.replace('TC =', '').replace(
+        ' ', '').split('+')
     c = int(gross_coeffs[0].split('*')[0])
     d = int(gross_coeffs[1])
     q = 2
