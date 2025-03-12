@@ -20,32 +20,32 @@ def main():
         ' ', '').split('+')
     c = int(gross_coeffs[0].split('*')[0])
     d = int(gross_coeffs[1])
-    q = 2
+    Q = 2
 
     # 1
-    TR = (a - b * q) * q
-    TR_prev = (a - b * (q - 1)) * (q - 1)
+    TR = (a - b * Q) * Q
+    TR_prev = (a - b * (Q - 1)) * (Q - 1)
     MR = TR - TR_prev
-    TC = c * q + d
-    TC_prev = c * (q - 1) + d
+    TC = c * Q + d
+    TC_prev = c * (Q - 1) + d
     MC = TC - TC_prev
 
     # 2
-    Q = MR - MC
+    q = MR - MC
     
     # 3
-    P = a - b * Q
+    P = a - b * q
 
     # 4
-    TR = P * Q
-    TC_new = c * Q + d
+    TR = P * q
+    TC_new = c * q + d
     profit = TR - TC_new
 
     # 5
     optimal_volume_competition = P - MC
     
     print(f'{ru.MARGINAL_REVENUE}{MR}, {ru.MARGINAL_COSTS}{MC}')
-    print(f'{ru.OPTIMAL_VOLUME}{Q}')
+    print(f'{ru.OPTIMAL_VOLUME}{q}')
     print(f'{ru.PRICE}{P}')
     print(f'{ru.PROFIT}{profit}')
     print(f'{ru.OPTIMAL_VOLUME_COMPETITION}{optimal_volume_competition}')
