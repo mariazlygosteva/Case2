@@ -39,8 +39,8 @@ def main():
     profit = TR - TC_new
 
     # 5
-    optimal_volume_competition = TR - TC_new
-
+    optimal_volume_competition = P - MC
+    
     print(f'{ru.MARGINAL_REVENUE}{MR}, {ru.MARGINAL_COSTS}{MC}')
     print(f'{ru.OPTIMAL_VOLUME}{Q}')
     print(f'{ru.PRICE}{P}')
