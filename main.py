@@ -29,28 +29,23 @@ def main():
     MC = TC - C_prev
 
     # 2
-    optimal_volume = q
-
+    Q = MR - MC
     # 3
-    P = a - b * optimal_volume
+    P = a - b * Q
 
     # 4
-    TR = P * optimal_volume
-    TC_new = c * optimal_volume + d
+    TR = P * Q
+    TC_new = c * Q + d
     profit = TR - TC_new
 
     # 5
-    optimal_volume_competition = MC
-
-    # 6
-    price_competition = MC
+    optimal_volume_competition = TR - TC_new
 
     print(f'{ru.MARGINAL_REVENUE}{MR}, {ru.MARGINAL_COSTS}{MC}')
-    print(f'{ru.OPTIMAL_VOLUME}{optimal_volume}')
+    print(f'{ru.OPTIMAL_VOLUME}{Q}')
     print(f'{ru.PRICE}{P}')
     print(f'{ru.PROFIT}{profit}')
     print(f'{ru.OPTIMAL_VOLUME_COMPETITION}{optimal_volume_competition}')
-    print(f'{ru.PRICE_COMPETITION}{price_competition}')
 
 
 if __name__ == '__main__':
